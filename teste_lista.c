@@ -1,5 +1,5 @@
 /*
- * Programa para testar as operações de lista
+ * Programa para testar as operaï¿½ï¿½es de lista
  */
 
 #include<stdio.h>
@@ -10,8 +10,8 @@ int main(){
   Lista l;
 
   inicLista(&l);
-  
-  opcao = 1;  
+
+  opcao = 1;
   while(opcao <= 10 && opcao > 0){
     printf("\n 1 - insere um numero no inicio da lista");
     printf("\n 2 - insere um numero no fim da lista");
@@ -26,13 +26,13 @@ int main(){
     printf("\n qualquer outro numero para sair");
     printf("\n\nEntre com uma das opcoes acima: ");
     scanf("%d", &opcao);
-    
+
     switch (opcao){
     case 1:
       printf("\n\nEntre com o numero a ser inserido: ");
       scanf("%d", &num);
       insereInicio(&l, num);
-      break;      
+      break;
     case 2:
       printf("\n\nEntre com o numero a ser inserido: ");
       scanf("%d", &num);
@@ -43,24 +43,24 @@ int main(){
       scanf("%d", &num);
       insereOrdenado(&l, num);
       break;
-    case 4: 
+    case 4:
       if (ordenada(&l))
-	printf("\nLista ordenada\n");
+	     printf("\nLista ordenada\n");
       else
-	printf("\nLista desordenada\n");
+	     printf("\nLista desordenada\n");
       break;
-    case 5: 
-      ordena(&l);      
-      break;
+    case 5:
+      ordena(&l);
+    break;
     case 6:
       if (removeInicio(&l, &num))
-	printf("\nNumero removido: %d\n", num);
+	     printf("\nNumero removido: %d\n", num);
       else
-	printf("\nLista vazia");
+	     printf("\nLista vazia");
       break;
-    case 7:
+      case 7:
       if (removeFim(&l, &num))
-	printf("\nNumero removido: %d\n", num);
+	       printf("\nNumero removido: %d\n", num);
       else
 	printf("\nLista vazia");
       break;
@@ -69,17 +69,17 @@ int main(){
       scanf("%d", &num);
       if (!removeValor(&l, num))
 	printf("Numero nao encontrado");
-      break;      
-    case 9: 
+      break;
+    case 9:
       inverte(&l);
-      break;            
+      break;
     case 10: exibe(&l); break;
     }
-    
-    exibe(&l);
-    printf("\n\n");    
 
-  }    
+    exibe(&l);
+    printf("\n\n");
+
+  }
     //    libera(&l);
   return 0;
 }
